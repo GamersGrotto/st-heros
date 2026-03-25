@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Heroes from "./pages/Heroes"
 import Skills from "./pages/Skills"
 import About from "./pages/About"
+import Catalog from "./pages/Catalog"
 
 
 
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/heroes" element={<Heroes />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/about" element={<About />} />
+        <Route path="/catalog" element={<Catalog />} />
       </Routes>
     </>
   )
