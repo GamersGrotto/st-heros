@@ -12,6 +12,19 @@
 
   <body>
     <div id="root"></div>
+
+    <script>
+      (function () {
+        const redirect = sessionStorage.getItem("redirect");
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          const url = new URL(redirect);
+          const newPath = url.pathname + url.search + url.hash;
+          window.history.replaceState(null, "", newPath);
+        }
+      })();
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
